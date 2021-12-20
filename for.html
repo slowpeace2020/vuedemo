@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-on用法</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="(user,index) in users">
+           {{index}}-- {{user.name}}--{{user.age}}--{{user.state}}
+        </li>
+    </ul>
+    <br>
+    <ul>
+        <li v-for="(value,key,index) in wangfu">
+            {{index}}-- {{key}}--{{value}}
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el:"#app",
+        data:{
+            users:[
+                {"name":"林绮","age":25,"state":"晋王"},
+                {"name":"林绪","age":18,"state":"将军"},
+                {"name":"林绶","age":18,"state":"太子"},
+                {"name":"林纤","age":24,"state":"魏王世子"},
+            ],
+            wangfu:{
+                "wen":"谋士能臣",
+                "wu":"战将猛士",
+                "cai":"富可敌国",
+            }
+        },
+
+    })
+</script>
+</body>
+</html>

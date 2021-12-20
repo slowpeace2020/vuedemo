@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生命周期</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+<input type="checkbox" value="帝子降兮北渚" v-model="language">Java<br>
+<input type="checkbox" value="目眇眇兮愁予" v-model="language">Python<br>
+<input type="checkbox" value="袅袅兮秋风" v-model="language">PHP<br>
+<input type="checkbox" value="洞庭波兮木叶下" v-model="language">Go<br>
+<h2>
+    你选择了：{{language.join(", ")}}
+</h2>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el:"#app",
+        data:{
+            language:[]
+        },
+    })
+</script>
+</body>
+</html>

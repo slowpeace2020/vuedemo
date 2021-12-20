@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生命周期</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+{{msg}}
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el:"#app",
+        data:{
+            msg:"埋骨何须桑梓地"
+        },
+        //钩子函数
+        created(){
+            //this.msg ="人生无处不青山"
+        }
+    })
+</script>
+</body>
+</html>
